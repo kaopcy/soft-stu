@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-12 sticky-lg-top vh-100 col-lg-4">
+          <nav
+            id="navbar-example3"
+            class="h-100 flex-column align-items-stretch pe-4 border-end"
+          >
+            <nav class="nav nav-pills flex-column pt-4">
+              <a class="nav-link" href="#item-1">Getting set up</a>
+              <nav class="nav nav-pills flex-column">
+                <a class="nav-link ms-3 my-1" href="#item-1-1">
+                  Requirements
+                </a>
+                <a class="nav-link ms-3 my-1" href="#item-1-2">
+                  Optional: Add the Inter font family
+                </a>
+              </nav>
+              <a class="nav-link" href="#item-2">Using HTML and your own JS </a>
+              <nav class="nav nav-pills flex-column">
+                <a class="nav-link ms-3 my-1" href="#item-2-1"
+                  >Accessibility considerations
+                </a>
+                <a class="nav-link ms-3 my-1" href="#item-2-2"
+                  >Are you a disordered?</a
+                >
+              </nav>
+              <a class="nav-link" href="#item-3">Put your fan up! </a>
+              <nav class="nav nav-pills flex-column">
+                <a class="nav-link ms-3 my-1" href="#item-3-1">Smokie bacon </a>
+                <a class="nav-link ms-3 my-1" href="#item-3-2"
+                  >Pancake honey badger?!</a
+                >
+              </nav>
+            </nav>
+          </nav>
+        </div>
+
+        <div class="col-lg-8">
+          <div
+            data-bs-spy="scroll"
+            data-bs-target="#navbar-example3"
+            data-bs-smooth-scroll="true"
+            class="scrollspy-example-2"
+            tabindex="0"
+          >
+            <div id="item-1 ">
+              <div class="container pt-4">
+                <h4 class="mb-4">
+                  Getting set up<span class="m-2 badge bg-warning"
+                    >Superhot 101</span
+                  >
+                </h4>
+                <div id="item-1-1">
+                  <h5>Requirements</h5>
+                  <p>
+                    All of the components in Tailwind UI are designed for the
+                    latest version of Tailwind CSS, which is currently Tailwind
+                    CSS v3.4. To make sure that you are on the latest version of
+                    Tailwind, update via npm:
+                  </p>
+                  <p>
+                    All of the examples in Tailwind UI rely on the default
+                    Tailwind CSS configuration, but some rely on additional
+                    first-party plugins like
+                    <strong>@tailwindcss/forms</strong>,
+                    <strong>@tailwindcss/typography</strong>, and
+                    <strong>@tailwindcss/aspect-ratio</strong>.
+                  </p>
+                  <p>
+                    When an example requires any plugins or configuration
+                    changes, it will be noted in a comment at the top of the
+                    example.
+                  </p>
+                  <p>
+                    If you're new to Tailwind CSS, you'll want to
+                    <a href="https://tailwindcss.com/docs/installation"
+                      >read the Tailwind CSS documentation</a
+                    >
+                    as well to get the most out of Tailwind UI.
+                  </p>
+                  <code> npm install tailwindcss@latest </code>
+                </div>
+
+                <div id="item-1-2" class="mt-4">
+                  <h5>Optional: Add the Inter font family</h5>
+                  <p>
+                    We've used <a href="#">Inter</a> for all of the Tailwind UI
+                    examples because it's a beautiful font for UI design and is
+                    completely open-source and free. Using a custom font is nice
+                    because it allows us to make the components look the same on
+                    all browsers and operating systems.
+                  </p>
+                  <p>
+                    You can use any font you want in your own project of course,
+                    but if you'd like to use Inter, the easiest way is to first
+                    add it via the CDN:
+                  </p>
+
+                  <figure class="figure">
+                    <img
+                      src="https://images.unsplash.com/photo-1537884944318-390069bb8665?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      class="figure-img img-fluid rounded"
+                      alt="..."
+                    />
+                    <figcaption class="figure-caption text-end">
+                      Pathetic code. (Michael G.)
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+
+            <hr class="hr my-5" />
+
+            <div id="item-2">
+              <div class="container">
+                <h4 class="mb-4">Using HTML and your own JS</h4>
+                <p>
+                  All of the components in Tailwind UI are provided in three
+                  formats: React, Vue, and vanilla HTML.
+                </p>
+                <p>
+                  The React and Vue examples are fully functional
+                  out-of-the-box, and are powered by Headless UI — a library of
+                  unstyled components we designed to integrate perfectly with
+                  Tailwind CSS.
+                </p>
+                <p>
+                  The vanilla HTML examples
+                  <strong>do not include any JavaScript</strong> and are
+                  designed for people who prefer to write any necessary
+                  JavaScript themselves, or who want to integrate with a
+                  framework other than React or Vue.
+                </p>
+                <p>
+                  The vast majority of components don't need JavaScript at all
+                  and are completely ready to go out of the box, but things that
+                  are interactive like dropdowns, dialogs, etc. require you to
+                  write some JS to make them work the way you'd expect.
+                </p>
+                <p>
+                  In these situations we've provided some simple comments in the
+                  HTML to explain things like what classes you need to use for
+                  different states (like a toggle switch being on or off), or
+                  what classes we recommend for transitioning elements on to or
+                  off of the screen (like a dialog opening).
+                </p>
+
+                <div id="item-2-1">
+                  <h5 class="mb-4">Accessibility considerations</h5>
+                  <p>
+                    We've done our best to ensure that all of the markup in
+                    Tailwind UI is as accessible as possible, but when you're
+                    building interactive components,
+                    <strong
+                      >many accessibility best practices can only be implemented
+                      with JavaScript.</strong
+                    >
+                  </p>
+                  <span>For example: </span>
+                  <ul>
+                    <li class="my-3">
+                      <strong
+                        >Making sure components are properly keyboard
+                        accessible</strong
+                      >
+                      (dropdowns should be navigated with up/down arrow keys,
+                      dialogs should close when you press escape, tabs should be
+                      selected using the left/right arrow keys, etc.)
+                    </li>
+                    <li class="my-3">
+                      <strong>Correctly handling focus</strong>
+                      (you shouldn't be able to tab to an element behind a
+                      dialog, the first item in a dropdown should be
+                      auto-focused when the dropdown opens, etc.)
+                    </li>
+                    <li class="my-3">
+                      <strong
+                        >Synchronizing ARIA attributes with component
+                        state</strong
+                      >
+                      (adding aria-expanded="true" when a dropdown is open,
+                      setting aria-checked to true when a toggle is on, updating
+                      aria-activedescendant when navigating the options in an
+                      autocomplete, etc.)
+                    </li>
+                    <li class="my-3">...and many other concerns.</li>
+                  </ul>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img
+                        class="img-fluid"
+                        src="https://images.unsplash.com/photo-1528825871115-3581a5387919?q=80&w=2791&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt=""
+                      />
+                    </div>
+                    <div class="col-md-8">
+                      <h5>This is peeled banana.</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Possimus natus, dolorum odit asperiores veniam
+                        nulla nam? Quas illo beatae non.
+                      </p>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Possimus natus, dolorum odit asperiores veniam
+                        nulla nam? Quas illo beatae non.
+                      </p>
+                    </div>
+                  </div>
+                  <p class="mt-4">
+                    If you're using Tailwind UI with React or Vue, all of this
+                    complexity is handled for you automatically by
+                    <a href="#">Headless UI</a>, but if you are providing your
+                    own JS,
+                    <strong
+                      >it is up to you to follow accessibility best practices
+                      when adding interactive behavior.</strong
+                    >
+                  </p>
+                  <p>
+                    To learn more about building accessible UI components, we
+                    recommend studying the
+                    <a href="">WAI-ARIA Authoring Practices</a> published by the
+                    W3C.
+                  </p>
+                  <p>
+                    The vast majority of components don't need JavaScript at all
+                    and are completely ready to go out of the box, but things
+                    that are interactive like dropdowns, dialogs, etc. require
+                    you to write some JS to make them work the way you'd expect.
+                  </p>
+                  <p>
+                    In these situations we've provided some simple comments in
+                    the HTML to explain things like what classes you need to use
+                    for different states (like a toggle switch being on or off),
+                    or what classes we recommend for transitioning elements on
+                    to or off of the screen (like a dialog opening).
+                  </p>
+                </div>
+              </div>
+
+              <div id="item-2-2">
+                <h5 class="mb-4">Are you a disordered?</h5>
+                <p>
+                  We've done our best to ensure that all of the markup in
+                  Tailwind UI is as accessible as possible, but when you're
+                  building interactive components,
+                  <strong
+                    >many accessibility best practices can only be implemented
+                    with JavaScript.</strong
+                  >
+                </p>
+                <span>For example: </span>
+                <ul>
+                  <li class="my-3">
+                    <strong
+                      >Making sure components are properly keyboard
+                      accessible</strong
+                    >
+                    (dropdowns should be navigated with up/down arrow keys,
+                    dialogs should close when you press escape, tabs should be
+                    selected using the left/right arrow keys, etc.)
+                  </li>
+                  <li class="my-3">
+                    <strong>Correctly handling focus</strong>
+                    (you shouldn't be able to tab to an element behind a dialog,
+                    the first item in a dropdown should be auto-focused when the
+                    dropdown opens, etc.)
+                  </li>
+                  <li class="my-3">
+                    <strong
+                      >Synchronizing ARIA attributes with component
+                      state</strong
+                    >
+                    (adding aria-expanded="true" when a dropdown is open,
+                    setting aria-checked to true when a toggle is on, updating
+                    aria-activedescendant when navigating the options in an
+                    autocomplete, etc.)
+                  </li>
+                  <li class="my-3">...and many other concerns.</li>
+                </ul>
+                <p>
+                  If you're using Tailwind UI with React or Vue, all of this
+                  complexity is handled for you automatically by
+                  <a href="#">Headless UI</a>, but if you are providing your own
+                  JS,
+                  <strong
+                    >it is up to you to follow accessibility best practices when
+                    adding interactive behavior.</strong
+                  >
+                </p>
+                <p>
+                  To learn more about building accessible UI components, we
+                  recommend studying the
+                  <a href="">WAI-ARIA Authoring Practices</a> published by the
+                  W3C.
+                </p>
+                <p>
+                  The vast majority of components don't need JavaScript at all
+                  and are completely ready to go out of the box, but things that
+                  are interactive like dropdowns, dialogs, etc. require you to
+                  write some JS to make them work the way you'd expect.
+                </p>
+                <p>
+                  In these situations we've provided some simple comments in the
+                  HTML to explain things like what classes you need to use for
+                  different states (like a toggle switch being on or off), or
+                  what classes we recommend for transitioning elements on to or
+                  off of the screen (like a dialog opening).
+                </p>
+              </div>
+            </div>
+
+            <hr class="hr my-5" />
+
+            <div class="" id="item-3">
+              <h4 class="mb-4">Put your fan up!</h4>
+              <p>
+                HTML to explain things like what classes you need to use for
+                different states (like a toggle switch being on or off), or what
+                classes we
+              </p>
+              <div id="item-3-1">
+                <h5 class="mb-4">Smokie bacon</h5>
+                <p>
+                  To learn more about building accessible UI components, we
+                  recommend studying the WAI-ARIA Authoring Practices published
+                  by the W3C.
+                </p>
+                <div class="row">
+                  <div class="col-sm-6 mb-4 mb-sm-0">
+                    <div class="card" style="width: 100%">
+                      <img
+                        src="https://images.unsplash.com/photo-1603508102971-03777763fdf2?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        class="card-img-top"
+                        style="height: 200px; object-fit: cover"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">His name is Chris P. Bacon.</h5>
+                        <p class="card-text">
+                          Some quick example text to build on the card title and
+                          make up the bulk of the card's content.
+                        </p>
+                        <p class="card-text">
+                          <a
+                            href="#"
+                            class="stretched-link text-danger"
+                            style="position: relative"
+                            >Stretched link will not work here, because
+                            <code>position: relative</code> is added to the
+                            link</a
+                          >
+                        </p>
+                        <p
+                          class="card-text bg-body-tertiary"
+                          style="transform: rotate(0)"
+                        >
+                          This
+                          <a href="#" class="text-warning stretched-link"
+                            >stretched link</a
+                          >
+                          will only be spread over the <code>p</code>-tag,
+                          because a transform is applied to it.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="card" style="width: 100%">
+                      <img
+                        src="https://images.unsplash.com/photo-1627662234691-53b28f5a680c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y3Jpc3B5JTIwYmFjb258ZW58MHx8MHx8fDA%3D"
+                        class="card-img-top"
+                        style="height: 200px; object-fit: cover"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Card with stretched links</h5>
+                        <p class="card-text">
+                          Some quick example text to build on the card title and
+                          make up the bulk of the card's content.
+                        </p>
+                        <p class="card-text">
+                          <a
+                            href="#"
+                            class="stretched-link text-danger"
+                            style="position: relative"
+                            >Stretched link will not work here, because
+                            <code>position: relative</code> is added to the
+                            link</a
+                          >
+                        </p>
+                        <p
+                          class="card-text bg-body-tertiary"
+                          style="transform: rotate(0)"
+                        >
+                          This
+                          <a href="#" class="text-warning stretched-link"
+                            >stretched link</a
+                          >
+                          will only be spread over the <code>p</code>-tag,
+                          because a transform is applied to it.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="item-3-2" class="mt-4">
+                <h5 class="mb-4">Pancake honey badger?!</h5>
+                <div
+                  id="carouselExampleAutoplaying"
+                  class="carousel slide"
+                  style="height: 400px; overflow: hidden"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="https://media.istockphoto.com/id/503709656/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%A7%E0%B8%B2%E0%B8%9F%E0%B9%80%E0%B8%9F%E0%B8%B4%E0%B8%A5%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B9%84%E0%B8%82%E0%B9%88%E0%B8%94%E0%B8%B2%E0%B8%A7%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%9A%E0%B8%84%E0%B8%AD%E0%B8%99.jpg?s=2048x2048&w=is&k=20&c=TJ_hq3rDF7Mv1TZ4ZVFFH20QzzCuuJ1EMN3DgSkJMno="
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="https://media.istockphoto.com/id/1325291284/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%A7%E0%B8%B2%E0%B8%9F%E0%B9%80%E0%B8%9F%E0%B8%B4%E0%B8%A5%E0%B8%9E%E0%B8%B5%E0%B8%8A%E0%B8%AA%E0%B9%8D%E0%B8%B2%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%8A%E0%B9%89%E0%B8%B2.jpg?s=2048x2048&w=is&k=20&c=NGhhtS5Rv7sdLqRBPZG1rIEiOzgVbDWXDLOJd0Acej0="
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="https://media.istockphoto.com/id/1325150602/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%A7%E0%B8%B2%E0%B8%9F%E0%B9%80%E0%B8%9F%E0%B8%B4%E0%B8%A5%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B9%84%E0%B8%81%E0%B9%88%E0%B8%97%E0%B8%AD%E0%B8%94.jpg?s=2048x2048&w=is&k=20&c=e8AoOC790CwmSSCwti2A12ZTXFgYBfSPuEndrrSFI3E="
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <p class="my-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                  blanditiis sunt tenetur temporibus sapiente voluptas officiis
+                  nesciunt, laboriosam eaque iure animi necessitatibus eius non
+                  quidem repudiandae magnam suscipit esse itaque. Eius eos quam
+                  perspiciatis accusantium provident, inventore tempora.
+                  Assumenda dicta soluta totam possimus labore enim quasi
+                  asperiores laboriosam dolor quis reiciendis doloremque
+                  eveniet, repellendus maxime optio mollitia nulla dolore
+                  perferendis nostrum eum porro. Nihil nostrum, voluptas
+                  delectus temporibus harum officiis architecto nesciunt
+                  molestias ex repellat error voluptatibus illo tenetur eum sint
+                  omnis eligendi labore? Iste nam voluptates aperiam, alias unde
+                  excepturi corporis optio maxime quo. Dolore accusamus esse, ea
+                  ut expedita dignissimos obcaecati natus saepe eaque vel sit
+                  eum pariatur aperiam corporis atque quidem sunt iusto
+                  blanditiis quisquam fuga eos labore optio suscipit molestias.
+                  Nobis sit vitae reiciendis incidunt quos facilis quibusdam
+                  blanditiis, culpa dolorum aliquid distinctio, iusto et.
+                  Eveniet nulla error dolorem. Perspiciatis architecto explicabo
+                  sunt ullam cumque totam ipsum distinctio laboriosam iure
+                  repudiandae! Quisquam tempore fugiat quas, assumenda aliquid
+                  impedit consequuntur nisi ea eius a quaerat ipsum minus quos
+                  nam quidem, culpa recusandae eos dolor eligendi veritatis
+                  earum illum voluptate? Quia, accusamus, facere placeat nam
+                  quisquam autem sunt reiciendis quibusdam quaerat nisi minima
+                  porro provident eum ducimus. Numquam vel quisquam cupiditate,
+                  aspernatur iusto fugiat perferendis illo sit alias aperiam.
+                  Praesentium, nostrum pariatur? Nulla itaque, ipsum, porro eum
+                  minus aut voluptate perspiciatis ex asperiores earum esse
+                  veniam iure veritatis harum ut, blanditiis nesciunt ad
+                  consequuntur! Consequatur, repellat. Vitae ipsum facilis modi
+                  hic natus nemo est autem totam aliquam iste, omnis eligendi
+                  rem corporis alias id adipisci culpa nesciunt sapiente
+                  dignissimos numquam laudantium! Maxime magnam nisi
+                  perspiciatis nihil itaque repellendus alias accusamus ullam
+                  nemo soluta, odio iure, enim esse beatae laboriosam laborum
+                  saepe, qui unde velit laudantium? Dolore eum dolorem aperiam
+                  minima cupiditate iure hic qui eligendi provident eaque
+                  perferendis doloremque porro quas, reiciendis impedit ad enim
+                  numquam aliquam, dicta obcaecati repellat saepe? Blanditiis
+                  quos asperiores excepturi inventore, obcaecati, quae at nam
+                  consequuntur nesciunt voluptatum est quam ullam corporis sunt
+                  voluptatem id quidem? Eum, atque consequatur repellat
+                  voluptatum libero provident quaerat? Unde ratione fugiat
+                  laboriosam, iure error accusamus, obcaecati excepturi porro
+                  veniam esse hic quas eos? Ratione distinctio adipisci
+                  exercitationem a beatae itaque eum consequuntur quisquam
+                  debitis dignissimos cum necessitatibus dicta optio iusto eius,
+                  expedita voluptatem, velit blanditiis facilis? Maiores quasi
+                  sequi iure rerum placeat aspernatur, ad alias illo et iusto
+                  eligendi, porro velit atque aperiam aliquam ab, vitae
+                  praesentium magni excepturi accusantium. Odio ipsam vero
+                  cumque praesentium rerum voluptatum officiis eaque iure cum
+                  eum, eligendi est. Minus suscipit pariatur odit perferendis
+                  praesentium, corporis ab iusto earum, quisquam culpa
+                  temporibus eius facilis adipisci sapiente possimus ipsam.
+                  Inventore et, similique aspernatur temporibus amet ut? Ullam
+                  saepe vitae, suscipit corrupti dolorem quam voluptate beatae
+                  nam nesciunt esse tenetur veniam dicta sequi nobis molestiae
+                  earum id culpa rem corporis, accusamus quisquam est vero
+                  soluta eaque. Nostrum repellendus non dicta, nesciunt deleniti
+                  doloremque harum esse aperiam tenetur sequi reiciendis cum
+                  animi tempore! Expedita placeat quia aperiam doloribus
+                  doloremque, distinctio eligendi ullam tempora minima ratione.
+                </p>
+              </div>
+            </div>
+            <div class="card mb-5" style="width: 18rem; margin-left: auto">
+              <div class="card-body">
+                <h5 class="card-title">Piyachai Kaewchum</h5>
+                <h6 class="card-subtitle mb-2 text-muted">63010604</h6>
+                <p class="card-text">
+                  the super awesome author of this page. He is the best of the
+                  best.
+                </p>
+                <a href="#" class="card-link">go to top.</a>
+                <a href="#" class="card-link">Another cool button</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<style></style>
