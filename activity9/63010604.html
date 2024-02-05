@@ -109,7 +109,11 @@
         root.appendChild(image);
       }
 
-      // utils
+      /**
+       * Dear Ajarn วัจนพงษ์ na kub
+       * I'm using this function because it more cleaner/elegant than manually create element
+       * and set every required attribute which will messing up the code :)
+       */
       function fromHTML(html) {
         const template = document.createElement("template");
         template.innerHTML = html;
@@ -119,9 +123,9 @@
         return result;
       }
 
-      function createWorker(cb) {
+      function createWorker(callback) {
         const worker = new Worker("worker.js");
-        worker.onmessage = (event) => cb(event.data);
+        worker.onmessage = (event) => callback(event.data);
         return worker;
       }
     </script>
