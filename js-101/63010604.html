@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <div id="maincontainer"></div>
+
+    <script>
+      const imagePlaceholder =
+        "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?q=80&w=3639&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+      const imgSources = {
+        Firework:
+          "https://images.unsplash.com/photo-1531686264889-56fdcabd163f?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        Crest:
+          "https://images.unsplash.com/photo-1594384151968-e1616fa703ea?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        Action:
+          "https://images.unsplash.com/photo-1562424292-1fa536217c58?q=80&w=3475&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        Buffalo:
+          "https://images.unsplash.com/photo-1575414914265-ebc9aa2637f4?q=80&w=3512&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      };
+
+      const root = document.getElementById("maincontainer");
+
+      addHeader();
+      addDateButton();
+      addPersonalInfo();
+      addSnapShot();
+
+      function addHeader() {
+        const h1 = document.createElement("h2");
+        h1.innerHTML = "Execise 04: JavaScript&DOM";
+
+        root.appendChild(h1);
+      }
+
+      function addDateButton() {
+        const dateWrapper = document.createElement("div");
+        dateWrapper.style.height = "60px";
+
+        const dateButton = fromHTML(`
+          <button style="background-color: pink;top: 0;right: 0;">
+            ${new Date()}
+          </button>`);
+
+        const worker = createWorker(([date, color]) => {
+          dateButton.innerHTML = date;
+          dateButton.style.backgroundColor = color;
+        });
+
+        dateButton.onclick = function () {
+          if (dateButton.style.position == "fixed") {
+            dateButton.style.position = "static";
+            worker.postMessage("stop");
+          } else {
+            dateButton.style.position = "fixed";
+            worker.postMessage("start");
+          }
+        };
+
+        dateWrapper.appendChild(dateButton);
+        root.appendChild(dateWrapper);
+      }
+
+      function addPersonalInfo() {
+        const personalInfoButton = fromHTML(`
+          <a 
+            href="#" 
+            style="color: pink; textDecoration: underline; cursor: pointer;"
+            onmouseover="this.style.backgroundColor='yellow'; this.style.color='blue';"
+            onmouseout="this.style.backgroundColor='transparent'; this.style.color='pink';"
+          >
+            Personal Info
+          </a>`);
+
+        const personalInfo = fromHTML(`
+          <ul style="display: none">
+            <li>Piyachai Kaewchum, ID: 63010604</li>
+            <li>Subject: Software Studio</li>
+            <li>Semester: 2</li>
+          </ul>`);
+
+        personalInfoButton.addEventListener("click", () => {
+          if (personalInfo.style.display == "none") {
+            personalInfo.style.display = "block";
+          } else {
+            personalInfo.style.display = "none";
+          }
+        });
+
+        root.appendChild(personalInfoButton);
+        root.appendChild(personalInfo);
+      }
+
+      function addSnapShot() {
+        const snapShot = fromHTML(`<h1>Snapshots</h1>`);
+
+        const image = fromHTML(
+          `<img style="width: 800px;objectFit: cover;" src="${imagePlaceholder}" />`
+        );
+
+        const ul = document.createElement("ul");
+        Object.entries(imgSources).forEach(([name, source]) => {
+          const link = fromHTML(`
+            <li style="textDecoration: underline;cursor: pointer;">
+              <a href="#">${name}</a>
+            </li>`);
+          link.addEventListener("click", () => (image.src = source));
+          ul.appendChild(link);
+        });
+
+        root.appendChild(snapShot);
+        root.appendChild(ul);
+        root.appendChild(image);
+      }
+
+      // utils
+      function fromHTML(html) {
+        const template = document.createElement("template");
+        template.innerHTML = html;
+        const result = template.content.children;
+
+        if (result.length === 1) return result[0];
+        return result;
+      }
+
+      function createWorker(cb) {
+        const worker = new Worker("worker.js");
+        worker.onmessage = (event) => cb(event.data);
+        return worker;
+      }
+    </script>
+  </body>
+</html>
