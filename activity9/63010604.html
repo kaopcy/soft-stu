@@ -26,15 +26,12 @@
       addSnapShot();
 
       function addHeader() {
-        const h1 = document.createElement("h2");
-        h1.innerHTML = "Execise 04: JavaScript&DOM";
-
+        const h1 = fromHTML`<h1>Execise 04: JavaScript&DOM</h1>`;
         root.appendChild(h1);
       }
 
       function addDateButton() {
-        const dateWrapper = document.createElement("div");
-        dateWrapper.style.height = "60px";
+        const dateWrapper = fromHTML`<div style="height: 60px;" >`;
 
         const dateButton = fromHTML(`
           <button style="background-color: pink;top: 0;right: 0;">
