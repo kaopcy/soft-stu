@@ -10,7 +10,7 @@ const effect = () => {
 onmessage = (event) => {
   switch (event.data) {
     case "stop":
-      if (interval) clearInterval(interval);
+      if (interval) clearInterval(interval); // i dont want to have  interval running in background
       break;
     case "start":
       effect();
