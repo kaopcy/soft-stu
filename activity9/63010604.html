@@ -34,8 +34,8 @@
         const dateWrapper = fromHTML`<div style="height: 60px;" >`;
 
         const dateButton = fromHTML(`
-          <button style="background-color: pink;top: 0;right: 0;">
-            ${new Date()}
+          <button style="top: 0;right: 0;">
+            Click me to display Date and Time
           </button>`);
 
         const worker = createWorker(([date, color]) => {
@@ -110,7 +110,7 @@
       }
 
       /**
-       * Dear Ajarn วัจนพงษ์ na kub
+       * Note to Ajarn วัจนพงษ์ na kub
        * I'm using this function because it more cleaner/elegant than manually create element
        * and set every required attribute which will messing up the code :)
        */
